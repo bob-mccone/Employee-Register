@@ -1,0 +1,11 @@
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\EmployeeRegister.exe.config
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\EmployeeRegister.exe
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\EmployeeRegister.pdb
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.csprojAssemblyReference.cache
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmMain.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.Properties.Resources.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.csproj.GenerateResource.cache
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.csproj.CoreCompileInputs.cache
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.exe
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.pdb
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmEmployeeDetails.resources
