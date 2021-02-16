@@ -7,13 +7,26 @@ namespace EmployeeRegister
     {
         // Declaring a member variable
         private ClsEmployeeDetails _EmployeeDetails;
-        // Creating a new form object
-        private FrmEmployeeDetails _EmployeeDetailsForm = new FrmEmployeeDetails();
+        // Don't need to create a general form as we no longer need it as we have two other forms that we can use
+        private FrmEmployeeDetails _EmployeeDetailsForm;
+        // Creating a new wages employee object
+        private FrmEmployeeDetails _WagesEmployeeDetailsForm = new FrmWagesEmployeeDetails();
+        // Creating a new salary employee object
+        private FrmEmployeeDetails _SalaryEmployeeDetailsForm = new FrmSalaryEmployeeDetails();
+        // Creating a new contractor employee object
+        private FrmEmployeeDetails _ContractorEmployeeDetailsForm = new FrmContractorEmployeeDetails();
+        // Creating a new visitor employee object
+        private FrmEmployeeDetails _VisitorEmployeeDetailsForm = new FrmVisitorEmployeeDetails();
+        // Initialising and inserting into the combo box
+        private string[] _EmployeeType = { "Wages", "Salary", "Contractor", "Visitor" };
 
-        // Constructor
+        // Constructor, these have no return type
         public FrmMain()
         {
             InitializeComponent();
+            // Initialise the combo box
+            CboEmployeeType.DataSource = _EmployeeType;
+            CboEmployeeType.SelectedIndex = 0;
         }
 
         // Close button
@@ -79,8 +92,49 @@ namespace EmployeeRegister
         // Create employee method
         private void CreateEmployee()
         {
-            // Creating a ClsEmployeeDetails object and assigning it to the member variable _EmployeeDetails
-            _EmployeeDetails = new ClsEmployeeDetails();
+            switch (CboEmployeeType.SelectedIndex)
+            {
+                // If the second option was selected, open salary form
+                case 1:
+                    _EmployeeDetailsForm = _SalaryEmployeeDetailsForm;
+                    _EmployeeDetails = new ClsSalaryEmployeeDetails();
+                    break;
+                
+                // If the third option was selected, open contractor form
+                case 2:
+                    _EmployeeDetailsForm = _ContractorEmployeeDetailsForm;
+                    _EmployeeDetails = new ClsContractorEmployeeDetails();
+                    break;
+
+                // If the fourth option was selected, open visitors form
+                case 3:
+                    _EmployeeDetailsForm = _VisitorEmployeeDetailsForm;
+                    _EmployeeDetails = new ClsVisitorEmployeeDetails();
+                    break;
+
+                // Open wages form by default as this is always the first option
+                default:
+                    _EmployeeDetailsForm = _WagesEmployeeDetailsForm;
+                    _EmployeeDetails = new ClsWagesEmployeeDetails();
+                    break;
+            }
+            // If the combo box selected option was wages
+            //if (CboEmployeeType.SelectedIndex == 0)
+            //{
+                // Open employee wages form
+                //_EmployeeDetailsForm = _WagesEmployeeDetailsForm;
+                // Creating the correct employee details according to the users choice and assigning 
+                // it to the member variable _EmployeeDetails
+                //_EmployeeDetails = new ClsWagesEmployeeDetails();
+            //}
+            //else 
+            //{
+                // Open employee salary form
+                //_EmployeeDetailsForm = _SalaryEmployeeDetailsForm;
+                // Creating the correct employee details according to the users choice and assigning 
+                // it to the member variable _EmployeeDetails
+                //_EmployeeDetails = new ClsSalaryEmployeeDetails();
+            //}
             // Call edit employee details method
             EditEmployeeDetails();
         }

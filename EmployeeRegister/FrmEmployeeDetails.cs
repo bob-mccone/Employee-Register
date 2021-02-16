@@ -7,10 +7,10 @@ namespace EmployeeRegister
     // additional code, and it inherits from a class called form which is part of .NET
     public partial class FrmEmployeeDetails : Form
     {
-
         // Member variable of type ClsEmloyeeDetails, this is a reference variables and allocate only 
         // enough memory to hold an address to an object
-        private ClsEmployeeDetails _EmployeeDetails;
+        // This must be protected so that the inherited forms can access it
+        protected ClsEmployeeDetails _EmployeeDetails;
 
         // Constructor
         public FrmEmployeeDetails()
@@ -30,7 +30,8 @@ namespace EmployeeRegister
         }
 
         // Updates the text boxes with the employee details
-        private void UpdateDisplay()
+        // Must be protected and virtual so that the inherited forms can override them
+        protected virtual void UpdateDisplay()
         {
             TxtEmployeeID.Text = _EmployeeDetails.ID;
             TxtEmployeeName.Text = _EmployeeDetails.Name;
@@ -46,12 +47,20 @@ namespace EmployeeRegister
             TxtEmployeeLocation.Text = _EmployeeDetails.Location;
             TxtEmployeeWorkNo.Text = _EmployeeDetails.WorkNo;
             TxtEmployeeWorkEmail.Text = _EmployeeDetails.WorkEmail;
-            TxtEmployeeHourlyRate.Text = Convert.ToString(_EmployeeDetails.HourlyRate);
             TxtEmployeeID.Enabled = String.IsNullOrEmpty(_EmployeeDetails.ID);
         }
 
         // Assigning the contents of the textboxes on the form to the employee properties when the OK button is clicked
         private void BtnOK_Click(object sender, EventArgs e)
+        {
+            // Calling push data method
+            PushData();
+            DialogResult = DialogResult.OK;
+        }
+
+        // Push data method, this is so the form can work with inherited forms
+        // Must be protected and virtual so that the inherited forms can override them
+        protected virtual void PushData()
         {
             _EmployeeDetails.ID = TxtEmployeeID.Text;
             _EmployeeDetails.Name = TxtEmployeeName.Text;
@@ -67,8 +76,6 @@ namespace EmployeeRegister
             _EmployeeDetails.Location = TxtEmployeeLocation.Text;
             _EmployeeDetails.WorkNo = TxtEmployeeWorkNo.Text;
             _EmployeeDetails.WorkEmail = TxtEmployeeWorkEmail.Text;
-            _EmployeeDetails.HourlyRate = Convert.ToDecimal(TxtEmployeeHourlyRate.Text);
-            DialogResult = DialogResult.OK;
         }
 
         // Cancel button

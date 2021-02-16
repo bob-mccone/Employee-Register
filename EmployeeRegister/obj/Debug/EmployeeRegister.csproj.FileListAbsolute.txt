@@ -9,3 +9,7 @@ C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\Employee
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.exe
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.pdb
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmEmployeeDetails.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmSalaryEmployeeDetails.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmWagesEmployeeDetails.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmContractorEmployeeDetails.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmVisitorEmployeeDetails.resources
