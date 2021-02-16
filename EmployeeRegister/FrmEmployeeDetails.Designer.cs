@@ -54,11 +54,9 @@ namespace EmployeeRegister
             this.TxtEmployeeLocation = new System.Windows.Forms.TextBox();
             this.TxtEmployeeEmergencyRelationship = new System.Windows.Forms.TextBox();
             this.TxtEmployeeEmergencyContactNumber = new System.Windows.Forms.TextBox();
-            this.TxtEmployeeHourlyRate = new System.Windows.Forms.TextBox();
             this.TxtEmployeeWorkEmail = new System.Windows.Forms.TextBox();
             this.TxtEmployeeWorkNo = new System.Windows.Forms.TextBox();
             this.TxtEmployeeEmergencyContactPerson = new System.Windows.Forms.TextBox();
-            this.LblHouryRate = new System.Windows.Forms.Label();
             this.LblEmployeeEmergencyContactPerson = new System.Windows.Forms.Label();
             this.LblEmployeeEmergenctContactNumber = new System.Windows.Forms.Label();
             this.LblEmployeeEmergencyContactRelationship = new System.Windows.Forms.Label();
@@ -68,7 +66,7 @@ namespace EmployeeRegister
             // LblEmployeeID
             // 
             this.LblEmployeeID.AutoSize = true;
-            this.LblEmployeeID.Location = new System.Drawing.Point(130, 16);
+            this.LblEmployeeID.Location = new System.Drawing.Point(173, 16);
             this.LblEmployeeID.Name = "LblEmployeeID";
             this.LblEmployeeID.Size = new System.Drawing.Size(18, 13);
             this.LblEmployeeID.TabIndex = 0;
@@ -77,7 +75,7 @@ namespace EmployeeRegister
             // LblEmployeeName
             // 
             this.LblEmployeeName.AutoSize = true;
-            this.LblEmployeeName.Location = new System.Drawing.Point(113, 42);
+            this.LblEmployeeName.Location = new System.Drawing.Point(156, 42);
             this.LblEmployeeName.Name = "LblEmployeeName";
             this.LblEmployeeName.Size = new System.Drawing.Size(35, 13);
             this.LblEmployeeName.TabIndex = 1;
@@ -86,7 +84,7 @@ namespace EmployeeRegister
             // LblEmployeePosition
             // 
             this.LblEmployeePosition.AutoSize = true;
-            this.LblEmployeePosition.Location = new System.Drawing.Point(104, 276);
+            this.LblEmployeePosition.Location = new System.Drawing.Point(147, 276);
             this.LblEmployeePosition.Name = "LblEmployeePosition";
             this.LblEmployeePosition.Size = new System.Drawing.Size(44, 13);
             this.LblEmployeePosition.TabIndex = 2;
@@ -95,7 +93,7 @@ namespace EmployeeRegister
             // LblEmployeeLocation
             // 
             this.LblEmployeeLocation.AutoSize = true;
-            this.LblEmployeeLocation.Location = new System.Drawing.Point(100, 302);
+            this.LblEmployeeLocation.Location = new System.Drawing.Point(143, 302);
             this.LblEmployeeLocation.Name = "LblEmployeeLocation";
             this.LblEmployeeLocation.Size = new System.Drawing.Size(48, 13);
             this.LblEmployeeLocation.TabIndex = 3;
@@ -103,7 +101,7 @@ namespace EmployeeRegister
             // 
             // BtnOK
             // 
-            this.BtnOK.Location = new System.Drawing.Point(363, 12);
+            this.BtnOK.Location = new System.Drawing.Point(406, 12);
             this.BtnOK.Name = "BtnOK";
             this.BtnOK.Size = new System.Drawing.Size(75, 23);
             this.BtnOK.TabIndex = 4;
@@ -113,7 +111,7 @@ namespace EmployeeRegister
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(363, 41);
+            this.BtnCancel.Location = new System.Drawing.Point(406, 41);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(75, 23);
             this.BtnCancel.TabIndex = 5;
@@ -124,7 +122,7 @@ namespace EmployeeRegister
             // LblEmployeeDOB
             // 
             this.LblEmployeeDOB.AutoSize = true;
-            this.LblEmployeeDOB.Location = new System.Drawing.Point(82, 68);
+            this.LblEmployeeDOB.Location = new System.Drawing.Point(125, 68);
             this.LblEmployeeDOB.Name = "LblEmployeeDOB";
             this.LblEmployeeDOB.Size = new System.Drawing.Size(66, 13);
             this.LblEmployeeDOB.TabIndex = 6;
@@ -133,42 +131,42 @@ namespace EmployeeRegister
             // LstEmployeeSkillsQualifications
             // 
             this.LstEmployeeSkillsQualifications.FormattingEnabled = true;
-            this.LstEmployeeSkillsQualifications.Location = new System.Drawing.Point(363, 302);
+            this.LstEmployeeSkillsQualifications.Location = new System.Drawing.Point(406, 302);
             this.LstEmployeeSkillsQualifications.Name = "LstEmployeeSkillsQualifications";
             this.LstEmployeeSkillsQualifications.Size = new System.Drawing.Size(120, 95);
             this.LstEmployeeSkillsQualifications.TabIndex = 7;
             // 
             // TxtEmployeeID
             // 
-            this.TxtEmployeeID.Location = new System.Drawing.Point(154, 13);
+            this.TxtEmployeeID.Location = new System.Drawing.Point(197, 13);
             this.TxtEmployeeID.Name = "TxtEmployeeID";
             this.TxtEmployeeID.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeID.TabIndex = 8;
             // 
             // TxtEmployeeName
             // 
-            this.TxtEmployeeName.Location = new System.Drawing.Point(154, 39);
+            this.TxtEmployeeName.Location = new System.Drawing.Point(197, 39);
             this.TxtEmployeeName.Name = "TxtEmployeeName";
             this.TxtEmployeeName.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeName.TabIndex = 9;
             // 
             // TxtEmployeeAddress
             // 
-            this.TxtEmployeeAddress.Location = new System.Drawing.Point(154, 91);
+            this.TxtEmployeeAddress.Location = new System.Drawing.Point(197, 91);
             this.TxtEmployeeAddress.Name = "TxtEmployeeAddress";
             this.TxtEmployeeAddress.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeAddress.TabIndex = 10;
             // 
             // DtpEmployeeDOB
             // 
-            this.DtpEmployeeDOB.Location = new System.Drawing.Point(154, 65);
+            this.DtpEmployeeDOB.Location = new System.Drawing.Point(197, 65);
             this.DtpEmployeeDOB.Name = "DtpEmployeeDOB";
             this.DtpEmployeeDOB.Size = new System.Drawing.Size(200, 20);
             this.DtpEmployeeDOB.TabIndex = 11;
             // 
             // DtpEmployeeStartDate
             // 
-            this.DtpEmployeeStartDate.Location = new System.Drawing.Point(154, 247);
+            this.DtpEmployeeStartDate.Location = new System.Drawing.Point(197, 247);
             this.DtpEmployeeStartDate.Name = "DtpEmployeeStartDate";
             this.DtpEmployeeStartDate.Size = new System.Drawing.Size(200, 20);
             this.DtpEmployeeStartDate.TabIndex = 12;
@@ -176,7 +174,7 @@ namespace EmployeeRegister
             // LblEmployeeStart
             // 
             this.LblEmployeeStart.AutoSize = true;
-            this.LblEmployeeStart.Location = new System.Drawing.Point(93, 250);
+            this.LblEmployeeStart.Location = new System.Drawing.Point(136, 250);
             this.LblEmployeeStart.Name = "LblEmployeeStart";
             this.LblEmployeeStart.Size = new System.Drawing.Size(55, 13);
             this.LblEmployeeStart.TabIndex = 13;
@@ -185,7 +183,7 @@ namespace EmployeeRegister
             // LblEmployeeWorkEmail
             // 
             this.LblEmployeeWorkEmail.AutoSize = true;
-            this.LblEmployeeWorkEmail.Location = new System.Drawing.Point(87, 354);
+            this.LblEmployeeWorkEmail.Location = new System.Drawing.Point(130, 354);
             this.LblEmployeeWorkEmail.Name = "LblEmployeeWorkEmail";
             this.LblEmployeeWorkEmail.Size = new System.Drawing.Size(61, 13);
             this.LblEmployeeWorkEmail.TabIndex = 14;
@@ -194,7 +192,7 @@ namespace EmployeeRegister
             // LblEmployeeEmail
             // 
             this.LblEmployeeEmail.AutoSize = true;
-            this.LblEmployeeEmail.Location = new System.Drawing.Point(116, 146);
+            this.LblEmployeeEmail.Location = new System.Drawing.Point(159, 146);
             this.LblEmployeeEmail.Name = "LblEmployeeEmail";
             this.LblEmployeeEmail.Size = new System.Drawing.Size(32, 13);
             this.LblEmployeeEmail.TabIndex = 15;
@@ -203,7 +201,7 @@ namespace EmployeeRegister
             // LblEmployeeWorkNumber
             // 
             this.LblEmployeeWorkNumber.AutoSize = true;
-            this.LblEmployeeWorkNumber.Location = new System.Drawing.Point(105, 328);
+            this.LblEmployeeWorkNumber.Location = new System.Drawing.Point(148, 328);
             this.LblEmployeeWorkNumber.Name = "LblEmployeeWorkNumber";
             this.LblEmployeeWorkNumber.Size = new System.Drawing.Size(43, 13);
             this.LblEmployeeWorkNumber.TabIndex = 16;
@@ -212,7 +210,7 @@ namespace EmployeeRegister
             // LblEmployeePhoneNumber
             // 
             this.LblEmployeePhoneNumber.AutoSize = true;
-            this.LblEmployeePhoneNumber.Location = new System.Drawing.Point(100, 120);
+            this.LblEmployeePhoneNumber.Location = new System.Drawing.Point(143, 120);
             this.LblEmployeePhoneNumber.Name = "LblEmployeePhoneNumber";
             this.LblEmployeePhoneNumber.Size = new System.Drawing.Size(48, 13);
             this.LblEmployeePhoneNumber.TabIndex = 17;
@@ -221,7 +219,7 @@ namespace EmployeeRegister
             // LblEmployeeAddress
             // 
             this.LblEmployeeAddress.AutoSize = true;
-            this.LblEmployeeAddress.Location = new System.Drawing.Point(103, 94);
+            this.LblEmployeeAddress.Location = new System.Drawing.Point(146, 94);
             this.LblEmployeeAddress.Name = "LblEmployeeAddress";
             this.LblEmployeeAddress.Size = new System.Drawing.Size(45, 13);
             this.LblEmployeeAddress.TabIndex = 18;
@@ -229,87 +227,71 @@ namespace EmployeeRegister
             // 
             // TxtEmployeePhoneNumber
             // 
-            this.TxtEmployeePhoneNumber.Location = new System.Drawing.Point(154, 117);
+            this.TxtEmployeePhoneNumber.Location = new System.Drawing.Point(197, 117);
             this.TxtEmployeePhoneNumber.Name = "TxtEmployeePhoneNumber";
             this.TxtEmployeePhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeePhoneNumber.TabIndex = 19;
             // 
             // TxtEmployeeEmail
             // 
-            this.TxtEmployeeEmail.Location = new System.Drawing.Point(154, 143);
+            this.TxtEmployeeEmail.Location = new System.Drawing.Point(197, 143);
             this.TxtEmployeeEmail.Name = "TxtEmployeeEmail";
             this.TxtEmployeeEmail.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeEmail.TabIndex = 20;
             // 
             // TxtEmployeePosition
             // 
-            this.TxtEmployeePosition.Location = new System.Drawing.Point(154, 273);
+            this.TxtEmployeePosition.Location = new System.Drawing.Point(197, 273);
             this.TxtEmployeePosition.Name = "TxtEmployeePosition";
             this.TxtEmployeePosition.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeePosition.TabIndex = 21;
             // 
             // TxtEmployeeLocation
             // 
-            this.TxtEmployeeLocation.Location = new System.Drawing.Point(154, 299);
+            this.TxtEmployeeLocation.Location = new System.Drawing.Point(197, 299);
             this.TxtEmployeeLocation.Name = "TxtEmployeeLocation";
             this.TxtEmployeeLocation.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeLocation.TabIndex = 22;
             // 
             // TxtEmployeeEmergencyRelationship
             // 
-            this.TxtEmployeeEmergencyRelationship.Location = new System.Drawing.Point(154, 221);
+            this.TxtEmployeeEmergencyRelationship.Location = new System.Drawing.Point(197, 221);
             this.TxtEmployeeEmergencyRelationship.Name = "TxtEmployeeEmergencyRelationship";
             this.TxtEmployeeEmergencyRelationship.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeEmergencyRelationship.TabIndex = 23;
             // 
             // TxtEmployeeEmergencyContactNumber
             // 
-            this.TxtEmployeeEmergencyContactNumber.Location = new System.Drawing.Point(154, 195);
+            this.TxtEmployeeEmergencyContactNumber.Location = new System.Drawing.Point(197, 195);
             this.TxtEmployeeEmergencyContactNumber.Name = "TxtEmployeeEmergencyContactNumber";
             this.TxtEmployeeEmergencyContactNumber.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeEmergencyContactNumber.TabIndex = 24;
             // 
-            // TxtEmployeeHourlyRate
-            // 
-            this.TxtEmployeeHourlyRate.Location = new System.Drawing.Point(154, 377);
-            this.TxtEmployeeHourlyRate.Name = "TxtEmployeeHourlyRate";
-            this.TxtEmployeeHourlyRate.Size = new System.Drawing.Size(200, 20);
-            this.TxtEmployeeHourlyRate.TabIndex = 26;
-            // 
             // TxtEmployeeWorkEmail
             // 
-            this.TxtEmployeeWorkEmail.Location = new System.Drawing.Point(154, 351);
+            this.TxtEmployeeWorkEmail.Location = new System.Drawing.Point(197, 351);
             this.TxtEmployeeWorkEmail.Name = "TxtEmployeeWorkEmail";
             this.TxtEmployeeWorkEmail.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeWorkEmail.TabIndex = 27;
             // 
             // TxtEmployeeWorkNo
             // 
-            this.TxtEmployeeWorkNo.Location = new System.Drawing.Point(154, 325);
+            this.TxtEmployeeWorkNo.Location = new System.Drawing.Point(197, 325);
             this.TxtEmployeeWorkNo.Name = "TxtEmployeeWorkNo";
             this.TxtEmployeeWorkNo.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeWorkNo.TabIndex = 28;
             // 
             // TxtEmployeeEmergencyContactPerson
             // 
-            this.TxtEmployeeEmergencyContactPerson.Location = new System.Drawing.Point(154, 169);
+            this.TxtEmployeeEmergencyContactPerson.Location = new System.Drawing.Point(197, 169);
             this.TxtEmployeeEmergencyContactPerson.Name = "TxtEmployeeEmergencyContactPerson";
             this.TxtEmployeeEmergencyContactPerson.Size = new System.Drawing.Size(200, 20);
             this.TxtEmployeeEmergencyContactPerson.TabIndex = 29;
             // 
-            // LblHouryRate
-            // 
-            this.LblHouryRate.AutoSize = true;
-            this.LblHouryRate.Location = new System.Drawing.Point(76, 380);
-            this.LblHouryRate.Name = "LblHouryRate";
-            this.LblHouryRate.Size = new System.Drawing.Size(72, 13);
-            this.LblHouryRate.TabIndex = 30;
-            this.LblHouryRate.Text = "Hourly Rate $";
-            // 
             // LblEmployeeEmergencyContactPerson
             // 
             this.LblEmployeeEmergencyContactPerson.AutoSize = true;
-            this.LblEmployeeEmergencyContactPerson.Location = new System.Drawing.Point(12, 172);
+            this.LblEmployeeEmergencyContactPerson.Location = new System.Drawing.Point(55, 172);
             this.LblEmployeeEmergencyContactPerson.Name = "LblEmployeeEmergencyContactPerson";
             this.LblEmployeeEmergencyContactPerson.Size = new System.Drawing.Size(136, 13);
             this.LblEmployeeEmergencyContactPerson.TabIndex = 31;
@@ -318,7 +300,7 @@ namespace EmployeeRegister
             // LblEmployeeEmergenctContactNumber
             // 
             this.LblEmployeeEmergenctContactNumber.AutoSize = true;
-            this.LblEmployeeEmergenctContactNumber.Location = new System.Drawing.Point(38, 198);
+            this.LblEmployeeEmergenctContactNumber.Location = new System.Drawing.Point(81, 198);
             this.LblEmployeeEmergenctContactNumber.Name = "LblEmployeeEmergenctContactNumber";
             this.LblEmployeeEmergenctContactNumber.Size = new System.Drawing.Size(110, 13);
             this.LblEmployeeEmergenctContactNumber.TabIndex = 32;
@@ -327,7 +309,7 @@ namespace EmployeeRegister
             // LblEmployeeEmergencyContactRelationship
             // 
             this.LblEmployeeEmergencyContactRelationship.AutoSize = true;
-            this.LblEmployeeEmergencyContactRelationship.Location = new System.Drawing.Point(87, 224);
+            this.LblEmployeeEmergencyContactRelationship.Location = new System.Drawing.Point(130, 224);
             this.LblEmployeeEmergencyContactRelationship.Name = "LblEmployeeEmergencyContactRelationship";
             this.LblEmployeeEmergencyContactRelationship.Size = new System.Drawing.Size(65, 13);
             this.LblEmployeeEmergencyContactRelationship.TabIndex = 33;
@@ -336,7 +318,7 @@ namespace EmployeeRegister
             // LblEmployeeSkillsQualifications
             // 
             this.LblEmployeeSkillsQualifications.AutoSize = true;
-            this.LblEmployeeSkillsQualifications.Location = new System.Drawing.Point(360, 286);
+            this.LblEmployeeSkillsQualifications.Location = new System.Drawing.Point(403, 286);
             this.LblEmployeeSkillsQualifications.Name = "LblEmployeeSkillsQualifications";
             this.LblEmployeeSkillsQualifications.Size = new System.Drawing.Size(99, 13);
             this.LblEmployeeSkillsQualifications.TabIndex = 34;
@@ -346,16 +328,14 @@ namespace EmployeeRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 414);
+            this.ClientSize = new System.Drawing.Size(542, 414);
             this.Controls.Add(this.LblEmployeeSkillsQualifications);
             this.Controls.Add(this.LblEmployeeEmergencyContactRelationship);
             this.Controls.Add(this.LblEmployeeEmergenctContactNumber);
             this.Controls.Add(this.LblEmployeeEmergencyContactPerson);
-            this.Controls.Add(this.LblHouryRate);
             this.Controls.Add(this.TxtEmployeeEmergencyContactPerson);
             this.Controls.Add(this.TxtEmployeeWorkNo);
             this.Controls.Add(this.TxtEmployeeWorkEmail);
-            this.Controls.Add(this.TxtEmployeeHourlyRate);
             this.Controls.Add(this.TxtEmployeeEmergencyContactNumber);
             this.Controls.Add(this.TxtEmployeeEmergencyRelationship);
             this.Controls.Add(this.TxtEmployeeLocation);
@@ -416,11 +396,9 @@ namespace EmployeeRegister
         private System.Windows.Forms.TextBox TxtEmployeeLocation;
         private System.Windows.Forms.TextBox TxtEmployeeEmergencyRelationship;
         private System.Windows.Forms.TextBox TxtEmployeeEmergencyContactNumber;
-        private System.Windows.Forms.TextBox TxtEmployeeHourlyRate;
         private System.Windows.Forms.TextBox TxtEmployeeWorkEmail;
         private System.Windows.Forms.TextBox TxtEmployeeWorkNo;
         private System.Windows.Forms.TextBox TxtEmployeeEmergencyContactPerson;
-        private System.Windows.Forms.Label LblHouryRate;
         private System.Windows.Forms.Label LblEmployeeEmergencyContactPerson;
         private System.Windows.Forms.Label LblEmployeeEmergenctContactNumber;
         private System.Windows.Forms.Label LblEmployeeEmergencyContactRelationship;

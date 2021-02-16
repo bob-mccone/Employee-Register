@@ -33,6 +33,7 @@ namespace EmployeeRegister
             this.BtnModifyEmployee = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.LblEmployeeDetails = new System.Windows.Forms.Label();
+            this.CboEmployeeType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BtnCreateEmployee
@@ -67,17 +68,27 @@ namespace EmployeeRegister
             // 
             // LblEmployeeDetails
             // 
-            this.LblEmployeeDetails.Location = new System.Drawing.Point(115, 12);
+            this.LblEmployeeDetails.Location = new System.Drawing.Point(115, 41);
             this.LblEmployeeDetails.Name = "LblEmployeeDetails";
             this.LblEmployeeDetails.Size = new System.Drawing.Size(225, 81);
             this.LblEmployeeDetails.TabIndex = 3;
             this.LblEmployeeDetails.Text = "-";
             // 
+            // CboEmployeeType
+            // 
+            this.CboEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboEmployeeType.FormattingEnabled = true;
+            this.CboEmployeeType.Location = new System.Drawing.Point(115, 12);
+            this.CboEmployeeType.Name = "CboEmployeeType";
+            this.CboEmployeeType.Size = new System.Drawing.Size(225, 21);
+            this.CboEmployeeType.TabIndex = 4;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 106);
+            this.ClientSize = new System.Drawing.Size(352, 133);
+            this.Controls.Add(this.CboEmployeeType);
             this.Controls.Add(this.LblEmployeeDetails);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnModifyEmployee);
@@ -95,6 +106,7 @@ namespace EmployeeRegister
         private System.Windows.Forms.Button BtnModifyEmployee;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label LblEmployeeDetails;
+        private System.Windows.Forms.ComboBox CboEmployeeType;
     }
 }
 

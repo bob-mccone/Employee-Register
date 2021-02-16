@@ -2,7 +2,9 @@
 
 namespace EmployeeRegister
 {
-    public class ClsEmployeeDetails
+    // Now it is abstract, basically there are no employee detail objects as it is a base class and does 
+    // not have any instances, it is a template
+    public abstract class ClsEmployeeDetails
     {
         // Private member variables
         private string _ID;
@@ -19,7 +21,6 @@ namespace EmployeeRegister
         private string _Location;
         private string _WorkNo;
         private string _WorkEmail;
-        private decimal _HourlyRate;
 
         // Properties, normally public and contains the accessor methods set and get which expose 
         // the private member variable to the rest of the program.
@@ -37,14 +38,13 @@ namespace EmployeeRegister
         public string Location { get => _Location; set => _Location = value; }
         public string WorkNo { get => _WorkNo; set => _WorkNo = value; }
         public string WorkEmail { get => _WorkEmail; set => _WorkEmail = value; }
-        public decimal HourlyRate { get => _HourlyRate; set => _HourlyRate = value; }
 
 
 
         // Display employee ID, Name, Hourly rate, position and location on the main form
         public override string ToString()
         {
-            return ID + "\n" + Name + " " + HourlyRate + "\n" + Position + " " + Location;
+            return ID + "\n" + Name + "\n" + Position + " " + Location;
         }
     }
 }
