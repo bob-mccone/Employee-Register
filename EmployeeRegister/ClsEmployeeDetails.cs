@@ -6,6 +6,41 @@ namespace EmployeeRegister
     // not have any instances, it is a template
     public abstract class ClsEmployeeDetails
     {
+        // Initialising and inserting into the combo box, need to make it readonly as public variables are a no-no in OO programing, moving from form main to reduce coupling
+        public static readonly string[] EmployeeType = { "Wages", "Salary", "Contractor", "Visitor" };
+
+        // Static factory method, these are always accessible irrespective of objects created, its job is to return the correct employee dependant on the choice on the combo box
+        public static ClsEmployeeDetails NewEmployee(int prChoice)
+        {
+            // prChoice is referencing the combo box on form main, dont need a break because the return code will execute
+            switch(prChoice)
+            {
+                // If second option was selected
+                case 1:
+                    // Open salary employee details form
+                    return new ClsSalaryEmployeeDetails();
+
+                // If third option was selected
+                case 2:
+                    // Open contractor employee details form
+                    return new ClsContractorEmployeeDetails();
+
+                // If fourth option was selected
+                case 3:
+                    // Open visitor employee details form
+                    return new ClsVisitorEmployeeDetails();
+
+                // If first option or unchanged
+                default:
+                    // Open wages employee details form
+                    return new ClsWagesEmployeeDetails();
+
+            }
+        }
+
+        // Public abstract method that returns a boolean, tells us if editing was successful or not, abstract methods have no code
+        public abstract bool ViewEdit();
+
         // Private member variables
         private string _ID;
         private string _Name;
@@ -41,10 +76,10 @@ namespace EmployeeRegister
 
 
 
-        // Display employee ID, Name, Hourly rate, position and location on the main form
+        // Display employee ID, Name, position and location on the main form
         public override string ToString()
         {
-            return ID + "\n" + Name + "\n" + Position + " " + Location;
+            return ID + "\n" + Name + ", " + Position + "\n" + Location;
         }
     }
 }
