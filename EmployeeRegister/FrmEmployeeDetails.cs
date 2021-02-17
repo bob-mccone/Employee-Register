@@ -18,15 +18,17 @@ namespace EmployeeRegister
             InitializeComponent();
         }
 
-        // Execute when we want this form to display itself
-        public DialogResult ShowDialog(ClsEmployeeDetails prEmployeeDetails)
+        // Execute when we want this form to display itself, we now have show dialog to return a boolean rather than a dialog result due to the classes now call show dialog,
+        // If we continue to use dialog result in our classes then we would need a refernce to window forms which is called talking to strangers and is poor style
+        public bool ShowDialog(ClsEmployeeDetails prEmployeeDetails)
         {
             // Storing the parameter value in our member variable _EmployeeDetails
             _EmployeeDetails = prEmployeeDetails;
             // Calling the update display method
             UpdateDisplay();
             // Default method, this will return OK or cancel depends on what the user clicks on
-            return ShowDialog();
+            // This now returns a bool true/false
+            return ShowDialog() == DialogResult.OK;
         }
 
         // Updates the text boxes with the employee details
