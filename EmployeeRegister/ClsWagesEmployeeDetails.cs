@@ -18,6 +18,13 @@ namespace EmployeeRegister
             // Open wages employee details form
             return _Form.ShowDialog(this);
         }
+
+        // Overriding the protected string type of employee method in class employee details
+        protected override string TypeOfEmployee()
+        {
+            return "Wages";
+        }
+
         // private member variable
         private decimal _HourlyRate;
 

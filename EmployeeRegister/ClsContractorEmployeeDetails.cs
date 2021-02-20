@@ -19,6 +19,12 @@ namespace EmployeeRegister
             return _Form.ShowDialog(this);
         }
 
+        // Overriding the protected string type of employee method in class employee details
+        protected override string TypeOfEmployee()
+        {
+            return "Contractor";
+        }
+
         // Private member variables
         private string _EmployeeContractingCompany;
         private string _EmployeeContractingCompanyContactNo;

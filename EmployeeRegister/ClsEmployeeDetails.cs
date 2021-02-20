@@ -8,7 +8,7 @@ namespace EmployeeRegister
     {
         // Initialising and inserting into the combo box, need to make it readonly as public variables are a no-no in OO programing, moving from form main to reduce coupling
         public static readonly string[] EmployeeType = { "Wages", "Salary", "Contractor", "Visitor" };
-
+       
         // Static factory method, these are always accessible irrespective of objects created, its job is to return the correct employee dependant on the choice on the combo box
         public static ClsEmployeeDetails NewEmployee(int prChoice)
         {
@@ -34,13 +34,15 @@ namespace EmployeeRegister
                 default:
                     // Open wages employee details form
                     return new ClsWagesEmployeeDetails();
-
             }
         }
 
         // Public abstract method that returns a boolean, tells us if editing was successful or not, abstract methods have no code
         public abstract bool ViewEdit();
 
+        // Protected abstract method that returns a string depending on the type of employee created, don't need code as it is an abstract method and will be overridden by the sub classes
+        protected abstract string TypeOfEmployee();
+        
         // Private member variables
         private string _ID;
         private string _Name;
@@ -76,10 +78,10 @@ namespace EmployeeRegister
 
 
 
-        // Display employee ID, Name, position and location on the main form
+        // Display employee ID, Name, position and location on the main form, \n means new line, \t means tab charater
         public override string ToString()
         {
-            return ID + "\n" + Name + ", " + Position + "\n" + Location;
+            return ID + "\t" + Name + "\t" + Position + "\t" + Location + "\t" + TypeOfEmployee();
         }
     }
 }

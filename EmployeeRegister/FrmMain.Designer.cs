@@ -29,36 +29,14 @@ namespace EmployeeRegister
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnCreateEmployee = new System.Windows.Forms.Button();
-            this.BtnModifyEmployee = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.LblEmployeeDetails = new System.Windows.Forms.Label();
-            this.CboEmployeeType = new System.Windows.Forms.ComboBox();
+            this.BtnManageEmployees = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // BtnCreateEmployee
-            // 
-            this.BtnCreateEmployee.Location = new System.Drawing.Point(12, 12);
-            this.BtnCreateEmployee.Name = "BtnCreateEmployee";
-            this.BtnCreateEmployee.Size = new System.Drawing.Size(97, 23);
-            this.BtnCreateEmployee.TabIndex = 0;
-            this.BtnCreateEmployee.Text = "Create Employee";
-            this.BtnCreateEmployee.UseVisualStyleBackColor = true;
-            this.BtnCreateEmployee.Click += new System.EventHandler(this.BtnCreateEmployee_Click);
-            // 
-            // BtnModifyEmployee
-            // 
-            this.BtnModifyEmployee.Location = new System.Drawing.Point(12, 41);
-            this.BtnModifyEmployee.Name = "BtnModifyEmployee";
-            this.BtnModifyEmployee.Size = new System.Drawing.Size(97, 23);
-            this.BtnModifyEmployee.TabIndex = 1;
-            this.BtnModifyEmployee.Text = "Modify Employee";
-            this.BtnModifyEmployee.UseVisualStyleBackColor = true;
-            this.BtnModifyEmployee.Click += new System.EventHandler(this.BtnModifyEmployee_Click);
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(12, 70);
+            this.BtnClose.Location = new System.Drawing.Point(140, 12);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(97, 23);
             this.BtnClose.TabIndex = 2;
@@ -68,31 +46,30 @@ namespace EmployeeRegister
             // 
             // LblEmployeeDetails
             // 
-            this.LblEmployeeDetails.Location = new System.Drawing.Point(115, 41);
+            this.LblEmployeeDetails.Location = new System.Drawing.Point(12, 41);
             this.LblEmployeeDetails.Name = "LblEmployeeDetails";
             this.LblEmployeeDetails.Size = new System.Drawing.Size(225, 81);
             this.LblEmployeeDetails.TabIndex = 3;
             this.LblEmployeeDetails.Text = "-";
             // 
-            // CboEmployeeType
+            // BtnManageEmployees
             // 
-            this.CboEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboEmployeeType.FormattingEnabled = true;
-            this.CboEmployeeType.Location = new System.Drawing.Point(115, 12);
-            this.CboEmployeeType.Name = "CboEmployeeType";
-            this.CboEmployeeType.Size = new System.Drawing.Size(225, 21);
-            this.CboEmployeeType.TabIndex = 4;
+            this.BtnManageEmployees.Location = new System.Drawing.Point(12, 12);
+            this.BtnManageEmployees.Name = "BtnManageEmployees";
+            this.BtnManageEmployees.Size = new System.Drawing.Size(110, 23);
+            this.BtnManageEmployees.TabIndex = 4;
+            this.BtnManageEmployees.Text = "Manage Employees";
+            this.BtnManageEmployees.UseVisualStyleBackColor = true;
+            this.BtnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 133);
-            this.Controls.Add(this.CboEmployeeType);
+            this.ClientSize = new System.Drawing.Size(254, 133);
+            this.Controls.Add(this.BtnManageEmployees);
             this.Controls.Add(this.LblEmployeeDetails);
             this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.BtnModifyEmployee);
-            this.Controls.Add(this.BtnCreateEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmMain";
             this.Text = "Employee Register";
@@ -101,12 +78,9 @@ namespace EmployeeRegister
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnCreateEmployee;
-        private System.Windows.Forms.Button BtnModifyEmployee;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label LblEmployeeDetails;
-        private System.Windows.Forms.ComboBox CboEmployeeType;
+        private System.Windows.Forms.Button BtnManageEmployees;
     }
 }
 
