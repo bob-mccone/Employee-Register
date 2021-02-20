@@ -25,7 +25,8 @@ namespace EmployeeRegister
         private void UpdateDisplay()
         {
             LstEmployees.DataSource = null;
-            LstEmployees.DataSource = ClsEmployeeList.EmployeeList;
+            // As we are using a dictionary instead of a list we need to select the values column and convert it to a list before assigning it to the data source of the listbox
+            LstEmployees.DataSource = ClsEmployeeList.EmployeeList.Values.ToList<ClsEmployeeDetails>();
         }
 
         // Create employee button
@@ -111,8 +112,8 @@ namespace EmployeeRegister
             // If the user didn't cancel
             if (lcEmployeeDetails != null && lcEmployeeDetails.ViewEdit())
             {
-                // Add the new employee details to the list box
-                ClsEmployeeList.EmployeeList.Add(lcEmployeeDetails);
+                // Add the new employee details to the list box, as we are adding to a dictionary we need to put the key in
+                ClsEmployeeList.EmployeeList.Add(lcEmployeeDetails.ID, lcEmployeeDetails);
                 // Then we update the display to show the new employee in teh list box
                 UpdateDisplay();
             }
@@ -156,9 +157,27 @@ namespace EmployeeRegister
             // Find the selected employee in the list
             ClsEmployeeDetails lcEmployeeDetails = (ClsEmployeeDetails)LstEmployees.SelectedItem;
             // Remove the selected employee
-            ClsEmployeeList.EmployeeList.Remove(lcEmployeeDetails);
+            ClsEmployeeList.EmployeeList.Remove(lcEmployeeDetails.ID);
             // Update the list box to show that the employee has been removed
             UpdateDisplay();
+        }
+
+        // Find employee button
+        private void BtnFindEmployee_Click(object sender, EventArgs e)
+        {
+            // Assigning a local variable
+            ClsEmployeeDetails lcEmployeeDetails;
+            // Find the ID that the user entered
+            if (ClsEmployeeList.EmployeeList.TryGetValue(TxtFindEmployeeDetails.Text,out lcEmployeeDetails))
+            {
+                // Once found the employee select it
+                LstEmployees.SelectedItem = lcEmployeeDetails;
+            }
+            else
+            {
+                // Else display message box saying that we cant find an employee
+                MessageBox.Show("Unable to find an employee, please try again", "Can't find an employee");
+            }
         }
     }
 }

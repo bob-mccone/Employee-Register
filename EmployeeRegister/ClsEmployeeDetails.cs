@@ -81,7 +81,7 @@ namespace EmployeeRegister
         // Display employee ID, Name, position and location on the main form, \n means new line, \t means tab charater
         public override string ToString()
         {
-            return ID + "\t" + Name + "\t" + Position + "\t" + Location + "\t" + TypeOfEmployee();
+            return Name + "\t" + ID + "\t" + Position + "\t" + Location + "\t" + TypeOfEmployee();
         }
     }
 }
