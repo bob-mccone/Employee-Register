@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeRegister
 {
+    // Saving
+    [Serializable]
     // Making the class inherit from the base class
     class ClsSalaryEmployeeDetails : ClsEmployeeDetails
     {

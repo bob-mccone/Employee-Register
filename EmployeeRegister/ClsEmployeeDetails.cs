@@ -2,6 +2,8 @@
 
 namespace EmployeeRegister
 {
+    // Saving
+    [Serializable]
     // Now it is abstract, basically there are no employee detail objects as it is a base class and does 
     // not have any instances, it is a template
     public abstract class ClsEmployeeDetails
