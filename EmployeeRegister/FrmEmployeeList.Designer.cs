@@ -186,6 +186,7 @@ namespace EmployeeRegister
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmEmployeeList";
             this.Text = "Employee List";
+            this.Load += new System.EventHandler(this.FrmEmployeeList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

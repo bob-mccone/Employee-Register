@@ -179,5 +179,12 @@ namespace EmployeeRegister
                 MessageBox.Show("Unable to find an employee, please try again", "Can't find an employee");
             }
         }
+
+        // When form loads
+        private void FrmEmployeeList_Load(object sender, EventArgs e)
+        {
+            // Call update display
+            UpdateDisplay();
+        }
     }
 }
