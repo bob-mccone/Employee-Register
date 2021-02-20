@@ -13,3 +13,4 @@ C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\Employee
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmWagesEmployeeDetails.resources
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmContractorEmployeeDetails.resources
 C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmVisitorEmployeeDetails.resources
+C:\Users\bobmc\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\EmployeeRegister.FrmEmployeeList.resources

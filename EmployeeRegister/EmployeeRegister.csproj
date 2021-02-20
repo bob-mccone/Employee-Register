@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ClsContractorEmployeeDetails.cs" />
     <Compile Include="ClsEmployeeDetails.cs" />
+    <Compile Include="ClsEmployeeList.cs" />
     <Compile Include="ClsSalaryEmployeeDetails.cs" />
     <Compile Include="ClsVisitorEmployeeDetails.cs" />
     <Compile Include="ClsWagesEmployeeDetails.cs" />
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="FrmEmployeeDetails.Designer.cs">
       <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -94,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmployeeDetails.resx">
       <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

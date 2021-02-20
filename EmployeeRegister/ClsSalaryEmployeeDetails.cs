@@ -18,10 +18,17 @@ namespace EmployeeRegister
             // Open salary employee details form
             return _Form.ShowDialog(this);
         }
+
+        // Overriding the protected string type of employee method in class employee details
+        protected override string TypeOfEmployee()
+        {
+            return "Salary";
+        }
+
         // private member variables
-        private decimal _SalaryAmount;
+        private string _SalaryAmount;
 
         // Properties
-        public decimal SalaryAmount { get => _SalaryAmount; set => _SalaryAmount = value; }
+        public string SalaryAmount { get => _SalaryAmount; set => _SalaryAmount = value; }
     }
 }

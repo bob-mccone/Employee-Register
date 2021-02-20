@@ -25,7 +25,7 @@ namespace EmployeeRegister
             // into ClsSalaryEmployeeDetails in order to use the specific properties related to that class
             ClsSalaryEmployeeDetails lcEmployeeDetails = (ClsSalaryEmployeeDetails)_EmployeeDetails;
             // Moving the data in the same way with the base class
-            TxtEmployeeSalary.Text = Convert.ToString(lcEmployeeDetails.SalaryAmount);
+            TxtEmployeeSalary.Text = lcEmployeeDetails.SalaryAmount;
         }
 
         // We are overriding the base class push data
@@ -37,7 +37,7 @@ namespace EmployeeRegister
             // into ClsSalaryEmployeeDetails in order to use the specific properties related to that class
             ClsSalaryEmployeeDetails lcEmployeeDetails = (ClsSalaryEmployeeDetails)_EmployeeDetails;
             // Moving the data in the same way with the base class
-            lcEmployeeDetails.SalaryAmount = Convert.ToDecimal(TxtEmployeeSalary);
+            lcEmployeeDetails.SalaryAmount = TxtEmployeeSalary.Text;
         }
     }
 }
