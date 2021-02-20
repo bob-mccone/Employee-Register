@@ -55,9 +55,18 @@ namespace EmployeeRegister
         // Assigning the contents of the textboxes on the form to the employee properties when the OK button is clicked
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            // Calling push data method
-            PushData();
-            DialogResult = DialogResult.OK;
+            // If the ID textbox is enabled then we are adding a new employee so we need to check if the ID already exists
+            if (TxtEmployeeID.Enabled && ClsEmployeeList.EmployeeList.ContainsKey(TxtEmployeeID.Text))
+            {
+                // If it does exist then we display a message
+                MessageBox.Show("Employee with that ID already exists", "Duplicate ID");
+            }
+            else
+            {
+                // Calling push data method
+                PushData();
+                DialogResult = DialogResult.OK;
+            }
         }
 
         // Push data method, this is so the form can work with inherited forms

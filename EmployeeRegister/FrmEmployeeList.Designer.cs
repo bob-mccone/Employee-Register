@@ -40,6 +40,8 @@ namespace EmployeeRegister
             this.BtnClose = new System.Windows.Forms.Button();
             this.LblLocation = new System.Windows.Forms.Label();
             this.BtnDeleteEmployee = new System.Windows.Forms.Button();
+            this.BtnFindEmployee = new System.Windows.Forms.Button();
+            this.TxtFindEmployeeDetails = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CboEmployeeType
@@ -77,6 +79,7 @@ namespace EmployeeRegister
             this.LstEmployees.Location = new System.Drawing.Point(12, 25);
             this.LstEmployees.Name = "LstEmployees";
             this.LstEmployees.Size = new System.Drawing.Size(679, 355);
+            this.LstEmployees.Sorted = true;
             this.LstEmployees.TabIndex = 8;
             this.LstEmployees.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstEmployees_MouseDoubleClick);
             // 
@@ -145,11 +148,30 @@ namespace EmployeeRegister
             this.BtnDeleteEmployee.UseVisualStyleBackColor = true;
             this.BtnDeleteEmployee.Click += new System.EventHandler(this.BtnDeleteEmployee_Click);
             // 
+            // BtnFindEmployee
+            // 
+            this.BtnFindEmployee.Location = new System.Drawing.Point(12, 444);
+            this.BtnFindEmployee.Name = "BtnFindEmployee";
+            this.BtnFindEmployee.Size = new System.Drawing.Size(97, 23);
+            this.BtnFindEmployee.TabIndex = 16;
+            this.BtnFindEmployee.Text = "Find Employee";
+            this.BtnFindEmployee.UseVisualStyleBackColor = true;
+            this.BtnFindEmployee.Click += new System.EventHandler(this.BtnFindEmployee_Click);
+            // 
+            // TxtFindEmployeeDetails
+            // 
+            this.TxtFindEmployeeDetails.Location = new System.Drawing.Point(115, 447);
+            this.TxtFindEmployeeDetails.Name = "TxtFindEmployeeDetails";
+            this.TxtFindEmployeeDetails.Size = new System.Drawing.Size(225, 20);
+            this.TxtFindEmployeeDetails.TabIndex = 17;
+            // 
             // FrmEmployeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 478);
+            this.Controls.Add(this.TxtFindEmployeeDetails);
+            this.Controls.Add(this.BtnFindEmployee);
             this.Controls.Add(this.BtnDeleteEmployee);
             this.Controls.Add(this.LblLocation);
             this.Controls.Add(this.BtnClose);
@@ -182,5 +204,7 @@ namespace EmployeeRegister
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label LblLocation;
         private System.Windows.Forms.Button BtnDeleteEmployee;
+        private System.Windows.Forms.Button BtnFindEmployee;
+        private System.Windows.Forms.TextBox TxtFindEmployeeDetails;
     }
 }
