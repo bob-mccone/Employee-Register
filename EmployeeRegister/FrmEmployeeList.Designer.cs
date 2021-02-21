@@ -42,6 +42,9 @@ namespace EmployeeRegister
             this.BtnDeleteEmployee = new System.Windows.Forms.Button();
             this.BtnFindEmployee = new System.Windows.Forms.Button();
             this.TxtFindEmployeeDetails = new System.Windows.Forms.TextBox();
+            this.CboEmployeeDetailsSortChoice = new System.Windows.Forms.ComboBox();
+            this.LblSortEmployeeDetails = new System.Windows.Forms.Label();
+            this.LblDOB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CboEmployeeType
@@ -79,7 +82,6 @@ namespace EmployeeRegister
             this.LstEmployees.Location = new System.Drawing.Point(12, 25);
             this.LstEmployees.Name = "LstEmployees";
             this.LstEmployees.Size = new System.Drawing.Size(679, 355);
-            this.LstEmployees.Sorted = true;
             this.LstEmployees.TabIndex = 8;
             this.LstEmployees.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstEmployees_MouseDoubleClick);
             // 
@@ -165,11 +167,42 @@ namespace EmployeeRegister
             this.TxtFindEmployeeDetails.Size = new System.Drawing.Size(225, 20);
             this.TxtFindEmployeeDetails.TabIndex = 17;
             // 
+            // CboEmployeeDetailsSortChoice
+            // 
+            this.CboEmployeeDetailsSortChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboEmployeeDetailsSortChoice.FormattingEnabled = true;
+            this.CboEmployeeDetailsSortChoice.Location = new System.Drawing.Point(346, 415);
+            this.CboEmployeeDetailsSortChoice.Name = "CboEmployeeDetailsSortChoice";
+            this.CboEmployeeDetailsSortChoice.Size = new System.Drawing.Size(121, 21);
+            this.CboEmployeeDetailsSortChoice.TabIndex = 18;
+            this.CboEmployeeDetailsSortChoice.SelectedIndexChanged += new System.EventHandler(this.CboEmployeeDetailsSortChoice_SelectedIndexChanged);
+            // 
+            // LblSortEmployeeDetails
+            // 
+            this.LblSortEmployeeDetails.AutoSize = true;
+            this.LblSortEmployeeDetails.Location = new System.Drawing.Point(346, 389);
+            this.LblSortEmployeeDetails.Name = "LblSortEmployeeDetails";
+            this.LblSortEmployeeDetails.Size = new System.Drawing.Size(44, 13);
+            this.LblSortEmployeeDetails.TabIndex = 19;
+            this.LblSortEmployeeDetails.Text = "Sort By:";
+            // 
+            // LblDOB
+            // 
+            this.LblDOB.AutoSize = true;
+            this.LblDOB.Location = new System.Drawing.Point(582, 9);
+            this.LblDOB.Name = "LblDOB";
+            this.LblDOB.Size = new System.Drawing.Size(30, 13);
+            this.LblDOB.TabIndex = 20;
+            this.LblDOB.Text = "DOB";
+            // 
             // FrmEmployeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 478);
+            this.Controls.Add(this.LblDOB);
+            this.Controls.Add(this.LblSortEmployeeDetails);
+            this.Controls.Add(this.CboEmployeeDetailsSortChoice);
             this.Controls.Add(this.TxtFindEmployeeDetails);
             this.Controls.Add(this.BtnFindEmployee);
             this.Controls.Add(this.BtnDeleteEmployee);
@@ -207,5 +240,8 @@ namespace EmployeeRegister
         private System.Windows.Forms.Button BtnDeleteEmployee;
         private System.Windows.Forms.Button BtnFindEmployee;
         private System.Windows.Forms.TextBox TxtFindEmployeeDetails;
+        private System.Windows.Forms.ComboBox CboEmployeeDetailsSortChoice;
+        private System.Windows.Forms.Label LblSortEmployeeDetails;
+        private System.Windows.Forms.Label LblDOB;
     }
 }
