@@ -19,14 +19,70 @@ namespace EmployeeRegister
             // Initialise the combo box, the combo box is now in the class
             CboEmployeeType.DataSource = ClsEmployeeDetails.EmployeeType;
             CboEmployeeType.SelectedIndex = 0;
+            // Combo box for the sorting by DOB or Name
+            CboEmployeeDetailsSortChoice.DataSource = _SortStrings;
+            CboEmployeeDetailsSortChoice.SelectedIndex = 0;
         }
+
+        // DOB comparer, the : means that the interface in implemented not inherited because it is an interface, classes can inherit from just one base class but can implement a number of interfaces
+        class ClsDOBComparer : IComparer<ClsEmployeeDetails>
+        {
+            // Telling the comparer what we are going to be comparing
+            public int Compare(ClsEmployeeDetails prEmployeeDetailsX, ClsEmployeeDetails prEmployeeDetailsY)
+            {
+                // Creating a local variable that will sort via DOB first then name
+                int lcDOB = prEmployeeDetailsX.DOB.Date.CompareTo(prEmployeeDetailsY.DOB.Date);
+                // If lcDOB is not empty
+                if (lcDOB != 0)
+                {
+                    // Sort by DOB
+                    return lcDOB;
+                }
+                else
+                {
+                    // Comparing one employee name with another name to see who is first and returning the result
+                    return prEmployeeDetailsX.Name.CompareTo(prEmployeeDetailsY.Name);
+                }
+            }
+        }
+
+        // Name comparer
+        class ClsNameComparer : IComparer<ClsEmployeeDetails>
+        {
+            // Telling the comparer what we are going to be comparing
+            public int Compare(ClsEmployeeDetails prEmployeeDetailsX, ClsEmployeeDetails prEmployeeDetailsY)
+            {
+                // Creating a local variable that will sort via name then DOB
+                int lcName = prEmployeeDetailsX.Name.CompareTo(prEmployeeDetailsY.Name);
+                // If lcName is not empty
+                if (lcName != 0)
+                {
+                    // Sort by name
+                    return lcName;
+                }
+                else
+                {
+                    // Comparing one employee DOB with another DOB to see who is first and returning the result
+                    return prEmployeeDetailsX.DOB.Date.CompareTo(prEmployeeDetailsY.DOB.Date);
+                }
+            }
+        }
+
+        // Array of comparers
+        private IComparer<ClsEmployeeDetails>[] _Comparer = { new ClsNameComparer(), new ClsDOBComparer() };
+
+        // Corresponding array of display strings
+        private readonly string[] _SortStrings = { "Name", "DOB" };
 
         // Refreshes the contents of the listbox
         private void UpdateDisplay()
         {
-            LstEmployees.DataSource = null;
-            // As we are using a dictionary instead of a list we need to select the values column and convert it to a list before assigning it to the data source of the listbox
-            LstEmployees.DataSource = ClsEmployeeList.EmployeeList.Values.ToList<ClsEmployeeDetails>();
+            // Declaring a new employee list variable and assigning it to the value column of the employee list dictionary
+            List<ClsEmployeeDetails> lcEmployeeList = ClsEmployeeList.EmployeeList.Values.ToList();
+            // Calling the sort method of this list, passing the appropriate comparer from the comparer array
+            lcEmployeeList.Sort(_Comparer[CboEmployeeDetailsSortChoice.SelectedIndex]);
+            // Assigning the sorted employees list to thelistbox data source
+            LstEmployees.DataSource = lcEmployeeList;
         }
 
         // Create employee button
@@ -184,6 +240,13 @@ namespace EmployeeRegister
         private void FrmEmployeeList_Load(object sender, EventArgs e)
         {
             // Call update display
+            UpdateDisplay();
+        }
+
+        // When the user selects a different option in the combo box
+        private void CboEmployeeDetailsSortChoice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Call update display method
             UpdateDisplay();
         }
     }
